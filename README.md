@@ -1,12 +1,14 @@
 # AltIMU-AHRS
 
-Madgwick/Mahoney AHRS filters for the Pololu AltIMU9 and 10 series of 9 and 10DOF sensors. S. J. Remington 4/2020
+Madgwick/Mahony AHRS fusion filters for the Pololu AltIMU9 and 10 series of 9 and 10DOF sensors. S. J. Remington 4/2020
 The current implementation has been tested only on the AltIMU10 v3 and will need modifications to take input from
 later sensor versions.
 
-The currently implemented AHRS algorithm is the standard Madgwick/Mahony scheme (two alternative solvers) found in 
-other IMU repositories. However, new features have been added, such as code to simplify accurate calibration of the accelerometer, 
-magnetometer and gyro. Works very well!
+The currently implemented AHRS algorithm is the standard Mahony scheme, which makes the most sense to me (although the 
+Madgwick solver is included), as found and documented in several other IMU AHRS repositories. 
+
+However, new features have been added, such as code to simplify accurate calibration of the accelerometer, 
+magnetometer and gyro. Works very well, and is fast (180 updates/second with the Mahony algorithm, on a 16 MHz Arduino Pro Mini).
 
 SENSOR CALIBRATION
 
