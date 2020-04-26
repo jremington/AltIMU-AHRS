@@ -9,6 +9,7 @@ other IMU repositories. However, new features have been added, such as code to s
 magnetometer and gyro. Works very well!
 
 SENSOR CALIBRATION
+
 The magnetometer and accelerometer calibration approaches are described in this excellent blog article:
 
     http://sailboatinstruments.blogspot.com/2011/08/improved-magnetometer-calibration.html 
@@ -17,7 +18,8 @@ I also strongly recommend this blog post as a general guide to magnetometer/acce
 
    https://thecavepearlproject.org/2015/05/22/calibrating-any-compass-or-accelerometer-for-arduino/
 
-Magneto is a fair sized C program that runs on a PC or a Mac (suggest to use Code::Blocks IDE on Windows). 
+This repository in includes modified code for the Magneto program first described in the sailboatinstruments web page. 
+It is a fair sized C program that runs on a PC or a Mac (suggest to use Code::Blocks IDE on Windows). 
 For convenience, I’ve collected all of the basic parts of magneto, described in the sailboatinstruments link, into one file 
 that can be compiled and run on a desktop.
 
