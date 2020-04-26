@@ -28,4 +28,4 @@ The result is a set of offsets and a nine element matrix correction that must be
 The magneto program was modified to add measurement rejection criteria and to publish data initialization statements 
 that can be incorporated directly into the AHRS code.
 
-See the folder calibration examples for various intermediate files and screenshots of program output (.png image files).
+See the folder calibration_examples for various intermediate files and screenshots of program output (.png image files).
