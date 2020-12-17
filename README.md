@@ -2,6 +2,8 @@
 
 Madgwick/Mahony AHRS fusion filters for the Pololu AltIMU9 and 10 series of 9 and 10DOF sensors. S. J. Remington 4/2020
 
+Clarify 12/17/2020: ** The standard sensor orientation is X North Y West, Z Up ** for conventional Tait-Bryan angles.
+
 The current implementation has been tested only on the AltIMU10 v3 and will need minor modifications to take input from
 other AltIMU sensor versions. The code supports the L3DG20 gyro and the LSM303 accelerometer/magnetometer.
 
