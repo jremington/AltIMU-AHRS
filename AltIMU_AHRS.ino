@@ -101,25 +101,14 @@ void loop()
 
   MahonyQuaternionUpdate(Axyz[0], Axyz[1], Axyz[2], Gxyz[0], Gxyz[1], Gxyz[2],
                          Mxyz[0], Mxyz[1], Mxyz[2], deltat);
-  // Define Tait-Bryan angles.
-  // In this coordinate system, the positive z-axis is down toward Earth.
-  // Yaw is the angle between Sensor x-axis and Earth magnetic North
-  // (or true North if corrected for local declination, looking down on the sensor
-  // positive yaw is counterclockwise, which is not conventional for NED navigation.
-  // Pitch is angle between sensor x-axis and Earth ground plane, toward the
-  // Earth is positive, up toward the sky is negative. Roll is angle between
-  // sensor y-axis and Earth ground plane, y-axis up is positive roll. These
-  // arise from the definition of the homogeneous rotation matrix constructed
-  // from quaternions. Tait-Bryan angles as well as Euler angles are
-  // non-commutative; that is, the get the correct orientation the rotations
-  // must be applied in the correct order which for this configuration is yaw,
-  // pitch, and then roll.
-  // http://en.wikipedia.org/wiki/Conversion_between_quaternions_and_Euler_angles
-  // which has additional links.
-//  qw = q[0]; qx = q[1]; qy = q[2]; qz = q[3];
-//  roll  = atan2(2.0 * (qw * qx + qy * qz), 1.0 - 2.0 * (qx * qx + qy * qy));
-//  pitch = asin(2.0 * (qw * qy - qx * qz));
-//  yaw   = atan2(2.0 * (qx * qy + qw * qz), 1.0 - 2.0 * ( qy * qy + qz * qz));
+// Define Tait-Bryan angles.
+//  Tait-Bryan angles as well as Euler angles are
+// non-commutative; that is, the get the correct orientation the rotations
+// must be applied in the correct order which for this configuration is yaw,
+// pitch, and then roll.
+// http://en.wikipedia.org/wiki/Conversion_between_quaternions_and_Euler_angles
+// which has additional links.
+
   roll  = atan2((q[0] * q[1] + q[2] * q[3]), 0.5 - (q[1] * q[1] + q[2] * q[2]));
   pitch = asin(2.0 * (q[0] * q[2] - q[1] * q[3]));
   yaw   = atan2((q[1] * q[2] + q[0] * q[3]), 0.5 - ( q[2] * q[2] + q[3] * q[3]));
@@ -132,7 +121,8 @@ void loop()
   // http://www.ngdc.noaa.gov/geomag-web/#declination
   //conventional nav, yaw increases CW from North, corrected for local magnetic declination
   yaw = -yaw + 14.9;
-  
+  if (yaw > 360.0) yaw -= 360.0;
+  if (yaw < 0) yaw += 360.0;
   count++; //loop iterations
   now_ms = millis(); //time to print?
   if (now_ms - last_ms >= print_ms)
