@@ -57,7 +57,7 @@ int main()
  char filename[64];
   FILE *fp, *fp2;
 
- printf("\r\nMagneto 1.3 4/24/2020\r\nInput .csv file? ");
+ printf("\r\nMagneto 1.3 12/25/2020\r\nInput .csv file? ");
  scanf("%s",&filename);
 
  fp = fopen(filename, "r");
