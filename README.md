@@ -1,6 +1,6 @@
 # AltIMU-AHRS
 
-Madgwick/Mahony AHRS fusion filters for the Pololu AltIMU9 and 10 series of 9 and 10DOF sensors. S. J. Remington 4/2020
+Arduino Madgwick/Mahony AHRS fusion filters for the Pololu AltIMU9 and 10 series of 9 and 10DOF sensors. S. J. Remington 4/2020
 
 Clarify 12/17/2020: ** The standard sensor orientation is X North Y West, Z Up ** for conventional Tait-Bryan angles.
 
