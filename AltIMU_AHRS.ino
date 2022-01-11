@@ -1,7 +1,7 @@
 //
 // AltIMU-10 v3 Magwick/Mahony AHRS  S.J. Remington 
 // last update 12/17/2020, clean up comments
-
+// See: http://www.x-io.co.uk/open-source-imu-and-ahrs-algorithms/
 // Standard sensor orientation: Z Up X North Y West
 
 // Both the accelerometer and magnetometer MUST be properly calibrated for this program to work, and the gyro offset must be determned.
