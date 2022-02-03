@@ -101,7 +101,10 @@ void loop()
 
   MahonyQuaternionUpdate(Axyz[0], Axyz[1], Axyz[2], Gxyz[0], Gxyz[1], Gxyz[2],
                          Mxyz[0], Mxyz[1], Mxyz[2], deltat);
-// Define Tait-Bryan angles.
+  
+// Define Tait-Bryan angles. Strictly valid only for approximately level flight
+  
+  
 //  Tait-Bryan angles as well as Euler angles are
 // non-commutative; that is, the get the correct orientation the rotations
 // must be applied in the correct order which for this configuration is yaw,
