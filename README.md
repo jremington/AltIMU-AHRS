@@ -2,6 +2,12 @@
 
 Arduino Madgwick/Mahony AHRS fusion filters for the Pololu AltIMU9 and 10 series of 9 and 10DOF sensors. S. J. Remington 4/2020
 
+UPDATE October 2023: Python code for calibrating magnetometer and accelerometer added, which optionally replaces Magneto. The results are identical with the two methods.
+
+ references :
+    -  https://teslabs.com/articles/magnetometer-calibration/      
+    -  https://github.com/nliaudat/magnetometer_calibration/blob/main/calibrate.py
+
 Clarify 12/17/2020: ** The standard sensor orientation is X North Y West, Z Up ** for conventional Tait-Bryan angles.
 
 The current implementation has been tested only on the AltIMU10 v3 and will need minor modifications to take input from
