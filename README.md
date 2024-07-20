@@ -41,7 +41,9 @@ The result is a set of offsets and a nine element matrix correction that must be
 The magneto program was modified to add measurement rejection criteria and to publish data initialization statements 
 that can be incorporated directly into the AHRS code.
 
-See the folder calibration_examples for various intermediate files and screenshots of program output (.png image files). 3D plot of corrected magnetometer data (mag3_raw.csv from the example), produced by calibrate3.py
+See the folder calibration_examples for various intermediate files and screenshots of program output (.png image files). 
+
+Below, 3D plot of corrected magnetometer data (mag3_raw.csv from the example), produced by calibrate3.py
 
 ![Capture](https://github.com/user-attachments/assets/85ab9d15-bc12-4485-9b8b-9a939c559421)
 
