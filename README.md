@@ -2,7 +2,7 @@
 
 Arduino Madgwick/Mahony AHRS fusion filters for the Pololu AltIMU9 and 10 series of 9 and 10DOF sensors. S. J. Remington 4/2020
 
-UPDATE October 2023: Python code for calibrating magnetometer and accelerometer added, which optionally replaces Magneto. The results are identical with the two methods. Data input is a .csv file containing raw x,y,z magnetometer or accelerometer data, as for Magneto. The data file name is built into the code and can be changed. 
+UPDATE October 2023: Python code for calibrating magnetometer and accelerometer added, which optionally replaces Magneto. The results are identical with the two methods, however the Python program also produces a publication-quality plot of the corrected sensor data, which is handy for validating the results. Data input is a .csv file containing raw x,y,z magnetometer or accelerometer data, as for Magneto. The data file name is built into the code and can be changed. 
 
  references :
     -  https://teslabs.com/articles/magnetometer-calibration/      
